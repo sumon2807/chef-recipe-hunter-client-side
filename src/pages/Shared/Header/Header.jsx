@@ -4,6 +4,7 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { FaUserCircle } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -11,16 +12,26 @@ const Header = () => {
             <Navbar collapseOnSelect expand="lg" className='position-absolute fixed-top' variant="dark">
                 <Container>
                     <Navbar.Brand href="#home">
-                        <img src="../../../../public/assets/images/logo.png" alt="" />
+                        <img src="public/assets/images/logo.png" alt="" />
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="me-auto fs-5 fw-bold text-white">
-                            <Nav.Link href="#features">HOME</Nav.Link>
-                            <Nav.Link href="#pricing">OUR MANU</Nav.Link>
-                            <Nav.Link href="#pricing">SHOP</Nav.Link>
-                            <Nav.Link href="#pricing">BLOG</Nav.Link>
-                            <Nav.Link href="#pricing">CONTACT</Nav.Link>
+                        <Nav className="me-auto fs-5 fw-bold">
+                            <Nav.Link href="#features">
+                                <Link to="/" className='text-decoration-none text-white'>HOME</Link>
+                            </Nav.Link>
+                            <Nav.Link href="#pricing">
+                            <Link to="/ourmanu" className='text-decoration-none text-white'>OUR MANU</Link>
+                            </Nav.Link>
+                            <Nav.Link href="#pricing">
+                            <Link to="/shop" className='text-decoration-none text-white'>SHOP</Link>
+                            </Nav.Link>
+                            <Nav.Link href="#pricing">
+                            <Link to="/blog" className='text-decoration-none text-white'>BLOG</Link>
+                            </Nav.Link>
+                            <Nav.Link href="#pricing">
+                            <Link to="/contact" className='text-decoration-none text-white'>CONTACT</Link>
+                            </Nav.Link>
                         </Nav>
                         <Nav className=''>
                             <Nav.Link href="#deets" className='fs-3'><FaUserCircle /></Nav.Link>
