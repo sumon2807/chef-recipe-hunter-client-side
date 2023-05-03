@@ -1,5 +1,5 @@
 import React, { useContext, useState} from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {UserCircleIcon } from '@heroicons/react/24/solid'
 import { AuthContext } from '../../Provider/AuthProvider';
 import { FaGoogle, FaGithub } from "react-icons/fa";
@@ -7,6 +7,10 @@ import { FaGoogle, FaGithub } from "react-icons/fa";
 const Login = () => {
     const [error, setError]=useState('');
     const {signIn, googleSignIn, user, githubSignIn}=useContext(AuthContext)
+    const navigate=useNavigate();
+    const location=useLocation();
+
+    const from=location.state?.from?.pathname || '/';
 
     const handleGoogleSignIn=()=>{
         googleSignIn()
@@ -36,11 +40,19 @@ const Login = () => {
         const password=form.password.value;
         console.log(email, password)
 
+        setError('');
+        if(!email){
+            setError('Please input valid email address')
+        }
+        else if(password.length < 6){
+            setError('Password must be 6 cheracters or longer')
+        }
         signIn(email, password)
         .then(result=>{
             const loggedUser=result.user;
             console.log(loggedUser)
             form.reset();
+            navigate(from, {replace: true})
         })
         .catch(error=>{
             console.log(error)
@@ -74,6 +86,7 @@ const Login = () => {
                             </Link>
                             </label>
                         </div>
+                        <p className='text-red-400'>{error}</p>
                         <div className="form-control mt-2">
                             <button className="btn btn-outline btn-info mb-2">Login</button>
                             <button onClick={handleGoogleSignIn} className="btn btn-outline btn-info mb-2">

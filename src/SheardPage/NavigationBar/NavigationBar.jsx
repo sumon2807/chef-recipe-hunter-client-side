@@ -60,7 +60,7 @@ const NavigationBar = () => {
                         user ? <>
                         <img src={user.photoURL} alt="" className='w-10 h-10 rounded-full mx-2'/>
                         <button onClick={handleLogOut} className="btn btn-xs">Logout</button>
-                        </> : <button className='btn'><Link to="/login">Login</Link></button>
+                        </> : <button className='btn btn-outline btn-primary'><Link to="/login">Login</Link></button>
                     }
                 </div>
             </div>
