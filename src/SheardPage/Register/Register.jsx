@@ -1,9 +1,10 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Register = () => {
     const {user, createUser}=useContext(AuthContext);
+    const [error, setError]=useState('');
 
     const handleRegister=event=>{
         event.preventDefault();
@@ -14,7 +15,14 @@ const Register = () => {
         const confirm=form.confirm.value;
         const name=form.name.value;
         const photo=form.photo.value;
-        console.log(email, password, confirm, name, photo)
+        setError('')
+        if(password !==confirm){
+            setError('Your password did not match')
+            return
+        }
+        else if(password.length < 6){
+            setError('Password must be 6 charecters or longer')
+        }
 
         createUser(email, password)
         .then(result=>{
@@ -42,6 +50,12 @@ const Register = () => {
                         </div>
                         <div className="form-control">
                             <label className="label">
+                                <span className="label-text">Photo URL</span>
+                            </label>
+                            <input type="text" name='photo' placeholder="Photo URL" className="input input-bordered" required/>
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
                                 <span className="label-text">Email</span>
                             </label>
                             <input type="email" name='email' placeholder="Email" className="input input-bordered" required/>
@@ -63,8 +77,9 @@ const Register = () => {
                             </Link>
                             </label>
                         </div>
-                        <div className="form-control mt-6">
-                            <button className="btn btn-primary">Login</button>
+                        <p className='text-red-400'>{error}</p>
+                        <div className="form-control mt-2">
+                            <button className="btn btn-primary">Register</button>
                         </div>
                     </form>
                 </div>
