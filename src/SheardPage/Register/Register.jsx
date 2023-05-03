@@ -13,7 +13,8 @@ const Register = () => {
         const password=form.password.value;
         const confirm=form.confirm.value;
         const name=form.name.value;
-        console.log(email, password, confirm, name)
+        const photo=form.photo.value;
+        console.log(email, password, confirm, name, photo)
 
         createUser(email, password)
         .then(result=>{

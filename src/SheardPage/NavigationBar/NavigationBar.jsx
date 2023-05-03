@@ -32,7 +32,7 @@ const NavigationBar = () => {
                                     <li><a>Submenu 2</a></li>
                                 </ul>
                             </li>
-                            <li><a>ORDER</a></li>
+                            <li><Link to="/order">ORDER</Link></li>
                             <li><a>BLOG</a></li>
                         </ul>
                     </div>
@@ -51,16 +51,16 @@ const NavigationBar = () => {
                                 <li><a>RECIPE 2</a></li>
                             </ul>
                         </li>
-                        <li><a>ORDER</a></li>
+                        <li><Link to="/order">ORDER</Link></li>
                         <li><a>BLOG</a></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
                     {
                         user ? <>
-                        <UserCircleIcon className="h-10 w-10 text-blue-500 " />
+                        <img src={user.photoURL} alt="" className='w-10 h-10 rounded-full mx-2'/>
                         <button onClick={handleLogOut} className="btn btn-xs">Logout</button>
-                        </> : <a className="btn"><Link to="/login">Login</Link></a>
+                        </> : <button className='btn'><Link to="/login">Login</Link></button>
                     }
                 </div>
             </div>
