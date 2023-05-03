@@ -4,13 +4,22 @@ import {UserCircleIcon } from '@heroicons/react/24/solid'
 import { AuthContext } from '../../Provider/AuthProvider';
 
 const Login = () => {
-    const {signIn, googleSignIn, user}=useContext(AuthContext)
+    const {signIn, googleSignIn, user, githubSignIn}=useContext(AuthContext)
 
     const handleGoogleSignIn=()=>{
         googleSignIn()
         .then(result=>{
             const loggedUser=result.user;
-            console.log(loggedUser)
+        })
+        .catch(error=>{
+            console.log('error', error.message)
+        })
+    }
+
+    const handleGitHubSignIn=()=>{
+        githubSignIn()
+        .then(result=>{
+            const loggedUser=result.user;
         })
         .catch(error=>{
             console.log('error', error.message)
@@ -66,8 +75,11 @@ const Login = () => {
                         <div className="form-control mt-2">
                             <button className="btn btn-primary mb-2">Login</button>
                             <button onClick={handleGoogleSignIn} className="btn btn-outline btn-info mb-2">
-                                <UserCircleIcon className="h-8 w-8 text-blue-500 " />Google Login</button>
-                            <button className="btn btn-outline btn-info"><UserCircleIcon className="h-8 w-8 text-blue-500 " />GitHub Login</button>
+                                <UserCircleIcon className="h-8 w-8 text-blue-500 " />Google Login
+                            </button>
+                            <button onClick={handleGitHubSignIn} className="btn btn-outline btn-info">
+                                <UserCircleIcon className="h-8 w-8 text-blue-500 " />GitHub Login
+                            </button>
                         </div>
                     </form>
                 </div>
