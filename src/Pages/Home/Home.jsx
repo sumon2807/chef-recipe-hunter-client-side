@@ -1,5 +1,7 @@
 import React from 'react';
 import Story from './Story/Story';
+import OurManu from './OurManu/OurManu';
+import Save from './Discount/Save';
 
 const Home = () => {
     return (
@@ -75,6 +77,8 @@ const Home = () => {
             </section>
             <section>
                 <Story></Story>
+                <OurManu></OurManu>
+                <Save></Save>
             </section>
         </div>
     );
