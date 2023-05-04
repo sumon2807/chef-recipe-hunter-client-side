@@ -2,7 +2,7 @@ import React from 'react';
 
 const OurManu = () => {
     return (
-        <div className='my-12 mx-4'>
+        <div className='lg:my-12 lg:mx-4'>
             <div className='text-center mb-8'>
                 <h1 className='text-7xl font-extrabold text-rose-700 mb-4'>Our Menu</h1>
                 <h3 className='text-3xl font-bold text-gray-700 mb-4'>EXPLORE OUR FOODS</h3>

@@ -2,6 +2,7 @@ import React from 'react';
 import Story from './Story/Story';
 import OurManu from './OurManu/OurManu';
 import Save from './Discount/Save';
+import OurTeam from './OurTeam/OurTeam';
 
 const Home = () => {
     return (
@@ -79,6 +80,7 @@ const Home = () => {
                 <Story></Story>
                 <OurManu></OurManu>
                 <Save></Save>
+                <OurTeam></OurTeam>
             </section>
         </div>
     );
