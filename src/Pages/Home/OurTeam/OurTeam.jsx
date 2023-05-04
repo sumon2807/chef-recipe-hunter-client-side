@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const OurTeam = () => {
     return (
@@ -12,28 +13,28 @@ const OurTeam = () => {
                     <img className='rounded-lg' src="../../../../public/assets/images/chef1-removebg-preview.png" alt="" />
                     <div className='flex justify-between mt-4'>
                         <h3 className='font-semibold'>Name</h3>
-                        <button className='btn btn-outline btn-success btn-xs'>View Recipes</button>
+                        <Link to='/viewrecipe'><button className='btn btn-outline btn-success btn-xs'>View Recipes</button></Link>
                     </div>
                 </div>
                 <div className='border rounded-xl shadow-xl p-4'>
                     <img className='rounded-lg' src="../../../../public/assets/images/chef3-removebg-preview.png" alt="" />
                     <div className='flex justify-between mt-4'>
                         <h3 className='font-semibold'>Name</h3>
-                        <button className='btn btn-outline btn-success btn-xs'>View Recipes</button>
+                        <Link to='/viewrecipe'><button className='btn btn-outline btn-success btn-xs'>View Recipes</button></Link>
                     </div>
                 </div>
                 <div className='border rounded-xl shadow-xl p-4'>
                     <img className='rounded-lg' src="../../../../public/assets/images/chef2-removebg-preview.png" alt="" />
                     <div className='flex justify-between mt-4'>
                         <h3 className='font-semibold'>Name</h3>
-                        <button className='btn btn-outline btn-success btn-xs'>View Recipes</button>
+                        <Link to='/viewrecipe'><button className='btn btn-outline btn-success btn-xs'>View Recipes</button></Link>
                     </div>
                 </div>
                 <div className='border rounded-xl shadow-xl p-4'>
                     <img className='rounded-lg' src="../../../../public/assets/images/chef4-removebg-preview.png" alt="" />
                     <div className='flex justify-between mt-4'>
                         <h3 className='font-semibold'>Name</h3>
-                        <button className='btn btn-outline btn-success btn-xs'>View Recipes</button>
+                        <Link to='/viewrecipe'><button className='btn btn-outline btn-success btn-xs'>View Recipes</button></Link>
                     </div>
                 </div>
             </div>

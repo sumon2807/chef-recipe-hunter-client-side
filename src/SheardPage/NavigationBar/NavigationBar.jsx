@@ -51,7 +51,7 @@ const NavigationBar = () => {
                                 <li><a>RECIPE 2</a></li>
                             </ul>
                         </li>
-                        <li><Link to="/order">ORDER</Link></li>
+                        <li><Link to="/order">ORDERS</Link></li>
                         <li><a>BLOG</a></li>
                     </ul>
                 </div>

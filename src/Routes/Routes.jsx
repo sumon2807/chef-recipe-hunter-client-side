@@ -5,6 +5,8 @@ import Login from "../SheardPage/Login/Login";
 import Register from "../SheardPage/Register/Register";
 import Orders from "../Pages/Orders/Orders";
 import PrivateRoutes from "./PrivateRoutes";
+import ViewRecipes from "../Pages/ViewRecipe/ViewRecipes";
+import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 
 const router = createBrowserRouter([
     {
@@ -26,6 +28,14 @@ const router = createBrowserRouter([
             {
                 path: '/order',
                 element: <PrivateRoutes><Orders></Orders></PrivateRoutes>
+            },
+            {
+                path: '/viewrecipe',
+                element: <ViewRecipes></ViewRecipes>
+            },
+            {
+                path: '/recipeDetails',
+                element: <ViewDetails></ViewDetails>
             }
         ]
     }
