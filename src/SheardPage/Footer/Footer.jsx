@@ -15,7 +15,7 @@ const Footer = () => {
                 <FaYoutube className='text-3xl hover:text-rose-700' />
                 <FaPinterestP className='text-3xl hover:text-rose-700' />
             </div>
-            <div className="flex justify-center gap-4 mt-6">
+            <div className="flex justify-center gap-4 mt-6 ">
                 <a className="link link-hover hover:text-rose-700 font-bold">ABOUT US |</a>
                 <a className="link link-hover hover:text-rose-700 font-bold">MANU |</a>
                 <Link to="/order"><p className="link link-hover hover:text-rose-700 font-bold">ORDER NOW |</p></Link>
