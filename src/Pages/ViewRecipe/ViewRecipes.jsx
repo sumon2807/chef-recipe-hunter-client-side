@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterestP } from 're
 import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 const ViewRecipes = () => {
-    const recipes=useLoaderData();
+    const recipes=useLoaderData({});
     console.log(recipes)
     const {recipeName,chefName,yearsOfExperience,specialRecipeNumber,ratings}=recipes;
     return (
@@ -32,7 +32,7 @@ const ViewRecipes = () => {
                 <h1 className='text-3xl font-bold'>James colins's Recipes</h1>
                 <div className='grid grid-cols-2 gap-4 mt-8'>
                     <div className='flex rounded shadow-lg'>
-                        <img className='w-36 h-36 rounded-lg' src="../../../public/assets/images/img-01.jpg" alt="" />
+                        <img className='w-36 h-36 rounded-lg' src="https://i.ibb.co/QNG7389/blog-4.jpg" alt="" />
                         <div className='px-4'>
                             <h2 className='text-xl font-bold'>{recipeName}</h2>
                             <p><span className='font-semibold'>Rating: {ratings}</span></p>
@@ -40,24 +40,27 @@ const ViewRecipes = () => {
                         </div>
                     </div>
                     <div className='flex rounded shadow-lg'>
-                        <img className='w-36 h-36 rounded-lg' src="../../../public/assets/images/blog-1.jpg" alt="" />
+                        <img className='w-36 h-36 rounded-lg' src="https://i.ibb.co/4JFwwsH/img-01.jpg" alt="" />
                         <div className='px-4'>
                             <h2 className='text-xl font-bold'>Beef Massaman Soup Marroc Style</h2>
                             <p>Ratings..</p>
+                            <Link to="/recipeDetails"><button className='btn btn-outline btn-xs'>View Details</button></Link>
                         </div>
                     </div>
                     <div className='flex rounded shadow-lg'>
-                        <img className='w-36 h-36 rounded-lg' src="../../../public/assets/images/blog-4.jpg" alt="" />
+                        <img className='w-36 h-36 rounded-lg' src="https://i.ibb.co/vh0NnTm/img-02.jpg" alt="" />
                         <div className='px-4'>
                             <h2 className='text-xl font-bold'>Beef Massaman Soup Marroc Style</h2>
                             <p>Ratings..</p>
+                            <Link to="/recipeDetails"><button className='btn btn-outline btn-xs'>View Details</button></Link>
                         </div>
                     </div>
                     <div className='flex rounded shadow-lg'>
-                        <img className='w-36 h-36 rounded-lg' src="../../../public/assets/images/img-08.jpg" alt="" />
+                        <img className='w-36 h-36 rounded-lg' src="https://i.ibb.co/HB4G8M6/blog-1.jpg" alt="" />
                         <div className='px-4'>
                             <h2 className='text-xl font-bold'>Beef Massaman Soup Marroc Style</h2>
                             <p>Ratings..</p>
+                            <Link to="/recipeDetails"><button className='btn btn-outline btn-xs'>View Details</button></Link>
                         </div>
                     </div>
                     
