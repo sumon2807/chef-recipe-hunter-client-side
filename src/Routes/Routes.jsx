@@ -7,7 +7,6 @@ import Orders from "../Pages/Orders/Orders";
 import PrivateRoutes from "./PrivateRoutes";
 import ViewRecipes from "../Pages/ViewRecipe/ViewRecipes";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
-import OurTeam from "../Pages/Home/OurTeam/OurTeam";
 import OurChef from "../Pages/OurChef/OurChef";
 import Blog from "../Pages/Blog/Blog";
 

@@ -4,6 +4,7 @@ import OurManu from './OurManu/OurManu';
 import Save from './Discount/Save';
 import OurTeam from './OurTeam/OurTeam';
 import Discover from '../Discover/Discover';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
@@ -48,7 +49,7 @@ const Home = () => {
                     <div className='absolute left-20 lg:left-32 top-1/4 text-white'>
                         <h1 className=' text-2xl lg:text-7xl font-bold lg:font-extrabold font-serif text-rose-200'>DOUBLE <br /> BURGER</h1>
                         <h3 className='lg:text-5xl font-semibold mt-4 lg:mt-8'>ONLY <span className='text-yellow-400'>$8.95</span></h3>
-                        <button className="btn btn-secondary lg:mt-12 lg:text-2xl lg:font-extrabold">Buy Now</button>
+                        <button className="btn btn-secondary lg:mt-12 lg:text-2xl lg:font-extrabold"><Link to="/order">BUY NOW</Link></button>
                     </div>
                     <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
                         <a href="#slide2" className="btn btn-outline ">❮</a>
