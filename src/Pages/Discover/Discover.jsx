@@ -11,21 +11,21 @@ const Discover = () => {
                     <div className='grid lg:grid-cols-3 my-8'>
                         <div className='border rounded-lg shadow-lg py-8 mx-4'>
                             <div className='flex justify-center'>
-                                <img src="../../../public/assets/images/Breakfast.png" alt="" />
+                                <img src="https://i.ibb.co/tz4qYMv/Breakfast.png" alt="" />
                             </div>
                             <h2 className='text-3xl font-bold text-gray-700'>Breakfast</h2>
                             <p className='mt-4 px-8 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum excepturi libero itaque quaerat. Ab quasi maiores minus quas !</p>
                         </div>
                         <div className='border rounded-lg shadow-lg py-8 mx-4'>
                             <div className='flex justify-center'>
-                                <img src="../../../public/assets/images/Dinner.png" alt="" />
+                                <img src="https://i.ibb.co/L8Zf9yp/Dinner.png" alt="" />
                             </div>
                             <h2 className='text-3xl font-bold text-gray-700'>Dinner</h2>
                             <p className='mt-4 px-8 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum excepturi libero itaque quaerat. Ab quasi maiores minus quas !</p>
                         </div>
                         <div className='border rounded-lg shadow-lg py-8 mx-4'>
                             <div className='flex justify-center'>
-                                <img src="../../../public/assets/images/Lunch.png" alt="" />
+                                <img src="https://i.ibb.co/k2PB8PH/Lunch.png" alt="" />
                             </div>
                             <h2 className='text-3xl font-bold text-gray-700'>Lunch</h2>
                             <p className='mt-4 px-8 text-gray-600'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit cum excepturi libero itaque quaerat. Ab quasi maiores minus quas!</p>

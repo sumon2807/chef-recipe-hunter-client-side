@@ -7,7 +7,6 @@ import Discover from '../Discover/Discover';
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
-    
 
     useEffect(() => {
         fetch('https://b7a10-chef-recipe-hunter-server-side-sumon2807.vercel.app/categories')
@@ -15,11 +14,13 @@ const Home = () => {
             .then(data => setCategories(data))
             .catch(error => console.log(error))
     }, [])
+
+    
     return (
         <div>
             <div className="carousel w-full">
                 <div id="slide1" className="carousel-item relative w-full">
-                    <img src="../../../public/assets/images/slide-4.jpg" className="w-full" />
+                    <img src="https://i.ibb.co/SvjVx5C/slide-4.jpg" className="w-full" />
                     <div className='absolute left-20 lg:left-32 right-5 top-1/4 text-white'>
                         <h1 className='text-2xl lg:text-7xl font-extrabold font-serif text-rose-200'>CRISPY<br /> CHICKEN</h1>
                         <h3 className='lg:text-5xl font-semibold mt-4 lg:mt-8'>ONLY <span className='text-yellow-400'>$7.65</span></h3>
@@ -31,7 +32,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div id="slide2" className="carousel-item relative w-full">
-                    <img src="../../../public/assets/images/slide-5.jpg" className="w-full" />
+                    <img src="https://i.ibb.co/nmXxRZ0/slide-5.jpg" className="w-full" />
                     <div className='absolute right-20 lg:right-32 top-1/4 text-white'>
                         <h1 className='text-2xl font-bold lg:text-7xl lg:font-extrabold font-serif text-rose-200'>CHICKEN <br /> FINGERS</h1>
                         <h3 className='lg:text-5xl font-semibold mt-4 lg:mt-8'>ONLY <span className='text-yellow-400'>$8.95</span></h3>
@@ -43,7 +44,7 @@ const Home = () => {
                     </div>
                 </div>
                 <div id="slide3" className="carousel-item relative w-full">
-                    <img src="../../../public/assets/images/slide-6.jpg" className="w-full" />
+                    <img src="https://i.ibb.co/55hXvTk/slide-6.jpg" className="w-full" />
                     <div className='absolute left-20 lg:left-32 top-1/4 text-white'>
                         <h1 className=' text-2xl lg:text-7xl font-bold lg:font-extrabold font-serif text-rose-200'>DOUBLE <br /> BURGER</h1>
                         <h3 className='lg:text-5xl font-semibold mt-4 lg:mt-8'>ONLY <span className='text-yellow-400'>$8.95</span></h3>

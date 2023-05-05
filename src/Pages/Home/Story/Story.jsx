@@ -4,7 +4,7 @@ const Story = () => {
     return (
         <div className='grid lg:grid-cols-2 mx-4'>
             <div>
-                <img className='rounded-xl' src="../../../../public/assets/images/our-story.jpg" alt="" />
+                <img className='rounded-xl' src="https://i.ibb.co/dtfS8Lv/our-story.jpg" alt="" />
             </div>
             <div className='text-center p-8'>
                 <h1 className='text-7xl font-extrabold text-rose-700 mb-4'>Our Story</h1>

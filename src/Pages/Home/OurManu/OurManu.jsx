@@ -11,7 +11,8 @@ const OurManu = ({ category }) => {
                         <p>{chefDetails}</p>
                         <div className="card-actions justify-between mt-2">
                             <span className='text-2xl text-rose-700 font-bold'>$13.65</span>
-                            <Link to="/order"><button className="btn btn-primary">Buy Now</button></Link>
+                            
+                            <button className="btn btn-primary"><Link to="/order">Buy Now</Link></button>
                         </div>
                     </div>
                 </div>

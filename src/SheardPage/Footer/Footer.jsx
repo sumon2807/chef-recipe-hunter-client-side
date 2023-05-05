@@ -6,7 +6,7 @@ const Footer = () => {
     return (
         <div className='lg:my-8 text-center'>
             <div className='flex justify-center'>
-                <img src="../../../public/assets/images/logo.png" alt="" />
+                <img src="https://i.ibb.co/gjvBz0T/logo.png" alt="" />
             </div>
             <div className='flex justify-center gap-8 mt-4'>
                 <FaFacebookF className='text-3xl hover:text-rose-700' />

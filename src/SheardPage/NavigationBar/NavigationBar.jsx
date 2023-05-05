@@ -25,7 +25,7 @@ const NavigationBar = () => {
                             <li><a>BLOG</a></li>
                         </ul>
                     </div>
-                    <img src="../../../public/assets/images/logo.png" alt="" />
+                    <img src="https://i.ibb.co/gjvBz0T/logo.png" alt="" />
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1 font-bold text-white ">
