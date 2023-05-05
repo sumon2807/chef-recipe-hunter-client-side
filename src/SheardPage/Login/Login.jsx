@@ -88,7 +88,7 @@ const Login = () => {
                         </div>
                         <p className='text-red-400'>{error}</p>
                         <div className="form-control mt-2">
-                            <button className="btn btn-outline btn-info mb-2">Login</button>
+                            <button className="btn btn-outline btn-info mb-2"><Link to="/">Login</Link></button>
                             <button onClick={handleGoogleSignIn} className="btn btn-outline btn-info mb-2">
                                 <FaGoogle className="h-6 w-6 text-blue-500  mx-2"/> Google Login
                             </button>

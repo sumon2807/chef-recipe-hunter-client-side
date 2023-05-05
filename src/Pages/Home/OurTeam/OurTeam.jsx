@@ -1,42 +1,33 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import OurChef from '../../OurChef/OurChef';
 
 const OurTeam = () => {
+    const [chefs, setChefs]=useState([]);
+    console.log(chefs)
+    useEffect(()=>{
+        fetch('http://localhost:5000/categories')
+        .then(res=>res.json())
+        .then(data=>setChefs(data))
+        .catch(error=>console.log(error))
+    },[])
     return (
-        <div className='lg:my-12 lg:mx-4'>
-            <div className='text-center mb-8'>
-                <h1 className='text-7xl font-extrabold text-rose-700 mb-4'>Our Team</h1>
-                <h3 className='text-3xl font-bold text-gray-700 mb-4'>MEET WITH OUR COOK</h3>
+        <div>
+            <div className='lg:mx-8 my-16'>
+                <div className='text-center mb-8'>
+                    <h1 className='text-7xl font-extrabold text-rose-700 mb-4'>Our Team</h1>
+                    <h3 className='text-3xl font-bold text-gray-700 mb-4'>MEET WITH OUR COOK</h3>
+                </div>
             </div>
-            <div className='grid lg:grid-cols-4 my-8 gap-4'>
-                <div className='border rounded-xl shadow-xl p-4'>
-                    <img className='rounded-lg' src="../../../../public/assets/images/chef1-removebg-preview.png" alt="" />
-                    <div className='flex justify-between mt-4'>
-                        <h3 className='font-semibold'>Name</h3>
-                        <Link to='/viewrecipe'><button className='btn btn-outline btn-success btn-xs'>View Recipes</button></Link>
-                    </div>
-                </div>
-                <div className='border rounded-xl shadow-xl p-4'>
-                    <img className='rounded-lg' src="../../../../public/assets/images/chef3-removebg-preview.png" alt="" />
-                    <div className='flex justify-between mt-4'>
-                        <h3 className='font-semibold'>Name</h3>
-                        <Link to='/viewrecipe'><button className='btn btn-outline btn-success btn-xs'>View Recipes</button></Link>
-                    </div>
-                </div>
-                <div className='border rounded-xl shadow-xl p-4'>
-                    <img className='rounded-lg' src="../../../../public/assets/images/chef2-removebg-preview.png" alt="" />
-                    <div className='flex justify-between mt-4'>
-                        <h3 className='font-semibold'>Name</h3>
-                        <Link to='/viewrecipe'><button className='btn btn-outline btn-success btn-xs'>View Recipes</button></Link>
-                    </div>
-                </div>
-                <div className='border rounded-xl shadow-xl p-4'>
-                    <img className='rounded-lg' src="../../../../public/assets/images/chef4-removebg-preview.png" alt="" />
-                    <div className='flex justify-between mt-4'>
-                        <h3 className='font-semibold'>Name</h3>
-                        <Link to='/viewrecipe'><button className='btn btn-outline btn-success btn-xs'>View Recipes</button></Link>
-                    </div>
-                </div>
+            <div>
+                {
+                    chefs.map(chef=> <OurChef
+                    key={chef.id}
+                    chef={chef}
+                    >
+                        <Link to={`/ourchef/${chef.id}`}></Link>
+                    </OurChef>)
+                }
             </div>
         </div>
     );

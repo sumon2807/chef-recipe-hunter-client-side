@@ -7,6 +7,7 @@ import Discover from '../Discover/Discover';
 
 const Home = () => {
     const [categories, setCategories] = useState([]);
+    
 
     useEffect(() => {
         fetch('http://localhost:5000/categories')
@@ -62,13 +63,13 @@ const Home = () => {
                         <h1 className='text-7xl font-extrabold text-rose-700 mb-4'>Our Menu</h1>
                         <h3 className='text-3xl font-bold text-gray-700 mb-4'>EXPLORE OUR FOODS</h3>
                     </div>
-                    <div className='grid lg:grid-cols-3 gap-4'>
-                    {
-                        categories.map(category => <OurManu
-                            key={category.id}
-                            category={category}
-                        ></OurManu>)
-                    }
+                    <div className='grid lg:grid-cols-4 gap-4'>
+                        {
+                            categories.map(category => <OurManu
+                                key={category.id}
+                                category={category}
+                            ></OurManu>)
+                        }
                     </div>
                 </div>
                 <Save></Save>

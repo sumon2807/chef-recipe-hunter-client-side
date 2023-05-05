@@ -7,6 +7,8 @@ import Orders from "../Pages/Orders/Orders";
 import PrivateRoutes from "./PrivateRoutes";
 import ViewRecipes from "../Pages/ViewRecipe/ViewRecipes";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
+import OurTeam from "../Pages/Home/OurTeam/OurTeam";
+import OurChef from "../Pages/OurChef/OurChef";
 
 const router = createBrowserRouter([
     {
@@ -26,12 +28,17 @@ const router = createBrowserRouter([
                 element: <Register></Register>
             },
             {
-                path: '/order/',
+                path: '/order',
                 element: <PrivateRoutes><Orders></Orders></PrivateRoutes>
             },
             {
                 path: '/viewrecipe',
                 element: <ViewRecipes></ViewRecipes>
+            },
+            {
+                path: '/ourchef/:id',
+                element: <OurChef></OurChef>,
+                loader: ({params})=>fetch(`http://localhost:5000/categories/${params.id}`)
             },
             {
                 path: '/recipeDetails',
