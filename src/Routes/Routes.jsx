@@ -9,6 +9,7 @@ import ViewRecipes from "../Pages/ViewRecipe/ViewRecipes";
 import ViewDetails from "../Pages/ViewDetails/ViewDetails";
 import OurTeam from "../Pages/Home/OurTeam/OurTeam";
 import OurChef from "../Pages/OurChef/OurChef";
+import Blog from "../Pages/Blog/Blog";
 
 const router = createBrowserRouter([
     {
@@ -44,6 +45,10 @@ const router = createBrowserRouter([
             {
                 path: '/recipeDetails',
                 element: <ViewDetails></ViewDetails>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             }
         ]
     }

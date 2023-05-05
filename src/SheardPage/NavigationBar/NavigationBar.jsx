@@ -32,7 +32,7 @@ const NavigationBar = () => {
                         <li><Link to="/" >HOME</Link></li>
                         <li tabIndex={0}><a>MANU</a></li>
                         <li><Link to="/order">ORDERS</Link></li>
-                        <li><a>BLOG</a></li>
+                        <li><Link to="/blog">BLOG</Link></li>
                     </ul>
                 </div>
                 <div className="navbar-end">
