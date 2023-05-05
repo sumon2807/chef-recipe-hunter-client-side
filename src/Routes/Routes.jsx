@@ -20,11 +20,11 @@ const router = createBrowserRouter([
                 element: <Home></Home>
             },
             {
-                path:'/login',
+                path:'login',
                 element: <Login></Login>
             },
             {
-                path: '/register',
+                path: 'register',
                 element: <Register></Register>
             },
             {
@@ -32,13 +32,14 @@ const router = createBrowserRouter([
                 element: <PrivateRoutes><Orders></Orders></PrivateRoutes>
             },
             {
-                path: '/viewrecipe',
-                element: <ViewRecipes></ViewRecipes>
+                path: 'viewrecipe/:id',
+                element: <ViewRecipes></ViewRecipes>,
+                loader: ({params})=>fetch(`https://b7a10-chef-recipe-hunter-server-side-sumon2807.vercel.app/categories/${params.id}`)
             },
             {
                 path: '/ourchef/:id',
                 element: <OurChef></OurChef>,
-                loader: ({params})=>fetch(`http://localhost:5000/categories/${params.id}`)
+                loader: ({params})=>fetch(`https://b7a10-chef-recipe-hunter-server-side-sumon2807.vercel.app/categories/${params.id}`)
             },
             {
                 path: '/recipeDetails',

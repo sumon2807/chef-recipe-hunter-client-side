@@ -1,18 +1,20 @@
 import React from 'react';
 import { FaFacebookF, FaTwitter, FaInstagram, FaYoutube, FaPinterestP } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { Link, useLoaderData, useParams } from 'react-router-dom';
 
 const ViewRecipes = () => {
+    const recipes=useLoaderData();
+    console.log(recipes)
+    const {recipeName,chefName,yearsOfExperience,specialRecipeNumber,ratings}=recipes;
     return (
         <div className='flex justify-between my-16 mx-4'>
             <div>
                 <div className='flex justify-center items-center'>
                     <img className='w-32 h-32 rounded-full' src="../../../public/assets/images/user.png" alt="" />
                     <div className='mx-4 mt-8'>
-                        <h2 className='text-xl font-bold'>James Colins</h2>
-                        <p>Number of recipes</p>
-                        <p>Years of experience</p>
-                        <p>Likes</p>
+                        <h2 className='text-xl font-bold'>{chefName}</h2>
+                        <p>Special recipes: {specialRecipeNumber}</p>
+                        <p>Years of experience: {yearsOfExperience}</p>
                     </div>
                 </div>
                 <div className='text-center border rounded shadow-lg mt-10 p-8 lg:w-96'>
@@ -32,8 +34,8 @@ const ViewRecipes = () => {
                     <div className='flex rounded shadow-lg'>
                         <img className='w-36 h-36 rounded-lg' src="../../../public/assets/images/img-01.jpg" alt="" />
                         <div className='px-4'>
-                            <h2 className='text-xl font-bold'>Beef Massaman Soup Marroc Style</h2>
-                            <p><span className='font-semibold'>Rating:</span></p>
+                            <h2 className='text-xl font-bold'>{recipeName}</h2>
+                            <p><span className='font-semibold'>Rating: {ratings}</span></p>
                             <Link to="/recipeDetails"><button className='btn btn-outline btn-xs'>View Details</button></Link>
                         </div>
                     </div>

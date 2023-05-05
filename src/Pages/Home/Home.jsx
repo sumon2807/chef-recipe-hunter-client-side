@@ -10,7 +10,7 @@ const Home = () => {
     
 
     useEffect(() => {
-        fetch('http://localhost:5000/categories')
+        fetch('https://b7a10-chef-recipe-hunter-server-side-sumon2807.vercel.app/categories')
             .then(res => res.json())
             .then(data => setCategories(data))
             .catch(error => console.log(error))
